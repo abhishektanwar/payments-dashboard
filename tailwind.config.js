@@ -11,7 +11,8 @@ module.exports = {
         grayTertiary:'#4D4D4D',
         grayBG:'#FAFAFA',
         sidebarBG:'#1E2640',
-        hover:'#363C53'
+        hover:'#363C53',
+        white:'#FFFFFF'
       },
     },
     container: {
