@@ -1,0 +1,19 @@
+{
+  "name": "dukan-cashfree-payments-dashboard",
+  "version": "1.0.0",
+  "description": "A payments dashboard to show a comprehensive summary of the payments and list of all the payments processed ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abhishek Tanwar",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  }
+}
