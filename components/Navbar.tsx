@@ -42,7 +42,7 @@ const Search = () => {
 }
 
 const Navbar = () => {
-  return <div className='flex w-full px-6 justify-between items-center h-14 border-b-[1px] border-solid border-borderLight font-light'>
+  return <div className='flex w-full px-6 py-2 justify-between items-center h-14 border-b-[1px] border-solid border-borderLight font-light'>
     <LeftNavbarSection />
     <Search />
     <RightNavbarSection />

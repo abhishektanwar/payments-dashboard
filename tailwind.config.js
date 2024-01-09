@@ -17,7 +17,7 @@ module.exports = {
         white:'#FFFFFF',
         borderLight:'#D9D9D9',
         textPrimary:'#1A181E',
-        link:'#126EB4'
+        blue:'#126EB4'
       },
     },
     container: {

@@ -1,25 +1,35 @@
 import React from "react";
 import { CaretDown, Info } from "phosphor-react";
 import Filter from "./Filter";
+import Pagination from "./Pagination";
+import transactions, { Transaction } from "../../data/transactions";
+import { formatDate, formatRupee } from "../../utils";
 
-const TableBody = () => {
+const TransactionTableBody = () => {
   return (
     <div className="px-2.5">
-      <TableRow />
-      <TableRow />
-      <TableRow />
-      <TableRow />
+      {
+        transactions.map((txn, index) => {
+          return <TransactionTableRow
+            key={index}
+            orderId={txn.orderId}
+            orderDate={txn.orderDate}
+            orderAmount={txn.orderAmount}
+            txnFee={txn.txnFee}
+          />
+        })
+      }
     </div>
   )
 }
 
-const TableRow = () => {
+const TransactionTableRow = ({ orderId, orderAmount, orderDate, txnFee }: Transaction) => {
   return (
     <div className="grid grid-cols-4 gap-4 w-full py-3 text-primary text-lg font-light border-b-[1px] border-grayBgSecondary tracking-wide">
-      <div className="text-link">#281209</div>
-      <div className="">7 July, 2023</div>
-      <div className="justify-self-end">₹1,278.23</div>
-      <div className="justify-self-end">₹22</div>
+      <div className="text-blue">#{orderId}</div>
+      <div className="">{formatDate(orderDate)}</div>
+      <div className="justify-self-end">{formatRupee(orderAmount)}</div>
+      <div className="justify-self-end">{formatRupee(txnFee)}</div>
     </div>
   )
 }
@@ -45,14 +55,15 @@ const Table = () => {
   return (
     <div>
       <TableHeader />
-      <TableBody />
+      <TransactionTableBody />
+      <Pagination />
     </div>
   )
 }
 
 const TransactionsTable = () => {
   return (
-    <div className="bg-white p-3">
+    <div className="bg-white p-3 rounded shadow">
       <Filter />
       <Table />
     </div>
