@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { CaretDown, Info } from "phosphor-react";
 import Filter from "./Filter";
 import Pagination from "./Pagination";
@@ -35,6 +35,15 @@ const TransactionTableRow = ({ orderId, orderAmount, orderDate, txnFee }: Transa
 }
 
 const TableHeader = () => {
+  const [showTooltip, setShowTooltip] = useState(false);
+
+  const handleInfoIconHover = () => {
+    setShowTooltip(true);
+  };
+
+  const handleInfoIconLeave = () => {
+    setShowTooltip(false);
+  };
   return (
     <div className="bg-graySecondary rounded grid grid-cols-4 gap-4 w-full text-grayTertiary px-2.5 py-3 tracking-wide mt-4">
       <div className="">Order ID</div>
@@ -43,9 +52,17 @@ const TableHeader = () => {
         <CaretDown size={16} weight="fill" />
       </div>
       <div className="justify-self-end">Order amount</div>
-      <div className="flex items-center space-x-1 justify-self-end">
+      <div className="flex items-center space-x-1 justify-self-end relative"
+        onMouseEnter={handleInfoIconHover}
+        onMouseLeave={handleInfoIconLeave}
+      >
         <span>Transaction fees</span>
         <Info size={16} />
+        {showTooltip && (
+          <div className="absolute top-5 -right-4 text-xs opacity-80 rounded w-72 p-2 bg-grayTertiary text-white">
+            Transaction fees are charged as a percentage of the order amount according to your plan.
+          </div>
+        )}
       </div>
     </div>
   )
@@ -63,7 +80,7 @@ const Table = () => {
 
 const TransactionsTable = () => {
   return (
-    <div className="bg-white p-3 rounded shadow">
+    <div className="bg-white p-3 pb-7 rounded shadow">
       <Filter />
       <Table />
     </div>

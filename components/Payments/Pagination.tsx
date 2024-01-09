@@ -44,7 +44,6 @@ const Pagination = () => {
       <PreviousButton />
       <PagesIndex />
       <NextButton />
-      
     </div>
   )
 }

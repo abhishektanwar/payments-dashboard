@@ -4,7 +4,7 @@ import { CaretDown, ChatCenteredDots, MagnifyingGlass, Question } from 'phosphor
 const LeftNavbarSection = () => {
   return (
     <div className='flex space-x-3'>
-      <h4 className='text-textPrimary'>Payments</h4>
+      <h4 className='text-textPrimary font-medium'>Payments</h4>
       <div className='flex space-x-1 items-center text-grayTertiary'>
         <Question size={16} />
         <h6 className='text-sm'>How it works</h6>
