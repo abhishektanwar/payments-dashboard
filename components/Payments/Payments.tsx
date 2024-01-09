@@ -2,11 +2,13 @@ import { CaretDown } from 'phosphor-react';
 import React from 'react';
 import { useState } from 'react'
 import OrdersSummary from './OrdersSummary';
+import Transactions from './Transactions';
 
 const Payments = () => {
   return (
     <div className='flex-1 bg-grayBG px-6 py-4 mt-2'>
       <Overview />
+      <Transactions />
     </div>
   )
 }
