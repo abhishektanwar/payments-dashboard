@@ -5,7 +5,7 @@ import OrdersSummary from './OrdersSummary';
 
 const Payments = () => {
   return (
-    <div className='flex-1 bg-grayBG px-6 py-4'>
+    <div className='flex-1 bg-grayBG px-6 py-4 mt-2'>
       <Overview />
     </div>
   )
