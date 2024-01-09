@@ -3,7 +3,7 @@ import Sidebar from "./Sidebar"
 import TransactionsDashboard from "./TransactionsDashboard"
 
 const CashfreePaymentsDashboard = () => {
-  return <div className="flex">
+  return <div className="flex h-screen overflow-hidden">
     <Sidebar />
     <TransactionsDashboard />
   </div>

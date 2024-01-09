@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import Payments from './Payments/Payments';
 
 const TransactionsDashboard = () => {
-  return <div className='flex flex-col h-screen grow'>
+  return <div className='flex flex-col h-screen grow overflow-y-auto'>
     <Navbar />
     <Payments />
   </div>
