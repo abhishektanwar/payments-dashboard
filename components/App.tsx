@@ -1,5 +1,5 @@
 import React from 'react';
-import CashfreePaymentsDashboard from './CashFreePaymentsDashboard';
+import CashfreePaymentsDashboard from './CashfreePaymentsDashboard'
 
 const App = ()=> {
   return <CashfreePaymentsDashboard />

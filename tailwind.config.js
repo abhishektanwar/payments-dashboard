@@ -9,10 +9,14 @@ module.exports = {
         grayPrimary:'#D3D4D9',
         graySecondary:'#F2F2F2',
         grayTertiary:'#4D4D4D',
+        grayMuted:'#808080',
         grayBG:'#FAFAFA',
+        grayBgSecondary:'#E6E6E6',
         sidebarBG:'#1E2640',
         hover:'#363C53',
-        white:'#FFFFFF'
+        white:'#FFFFFF',
+        borderLight:'#D9D9D9',
+        textPrimary:'#1A181E'
       },
     },
     container: {

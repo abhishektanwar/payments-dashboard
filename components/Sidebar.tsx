@@ -31,7 +31,7 @@ const SidebarItems = () => {
 }
 
 const Sidebar = () => {
-  return <div className="h-screen w-60 bg-sidebarBG p-4 space-y-6">
+  return <div className="h-screen w-64 bg-sidebarBG p-4 space-y-6">
     <Account />
     <SidebarItems />
   </div>
