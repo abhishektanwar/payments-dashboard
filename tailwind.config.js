@@ -16,7 +16,8 @@ module.exports = {
         hover:'#363C53',
         white:'#FFFFFF',
         borderLight:'#D9D9D9',
-        textPrimary:'#1A181E'
+        textPrimary:'#1A181E',
+        link:'#126EB4'
       },
     },
     container: {

@@ -1,15 +1,7 @@
-import { ArrowsDownUp, CaretDown, DownloadSimple, MagnifyingGlass } from "phosphor-react";
-import React from "react";
+import React from 'react';
+import { ArrowsDownUp, DownloadSimple, MagnifyingGlass } from 'phosphor-react';
 
-const Table = () => {
-  return (
-    <div className="bg-white p-3">
-      <TableFilter />
-    </div>
-  )
-}
-
-const TableFilter = () => {
+const Filter = () => {
   return (
     <div className="flex">
       <Search />
@@ -53,4 +45,4 @@ const Search = () => {
   )
 }
 
-export default Table;
+export default Filter;
