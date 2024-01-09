@@ -1,5 +1,5 @@
 import React from "react"
-import { CaretDown } from "phosphor-react"
+import { CaretDown, Wallet } from "phosphor-react"
 import options from "../data/sidebarOptions"
 
 const Account = () => {
@@ -30,11 +30,29 @@ const SidebarItems = () => {
   )
 }
 
+const Credits = () => {
+  return (
+    <div className="flex items-center space-x-3 tracking-wider rounded-md px-4 py-2 mt-auto" style={{ backgroundColor: '#363C53' }}>
+      <div style={{ backgroundColor: '#4A5064' }} className="p-1.5 rounded-md">
+        <Wallet size={28} weight="light" color="white" />
+      </div>
+      <div className="flex flex-col">
+        <span style={{ color: "#D7D8DD" }} className="text-sm">Available credits</span>
+        <span className="text-white">222.10</span>
+      </div>
+    </div>
+  )
+}
+
 const Sidebar = () => {
-  return <div className="h-screen w-64 bg-sidebarBG p-4 space-y-6">
-    <Account />
-    <SidebarItems />
-  </div>
+  return (
+    <div className="flex flex-col h-screen w-64 bg-sidebarBG p-4 space-y-6">
+      <Account />
+      <SidebarItems />
+      <div className="flex-grow" />
+      <Credits />
+    </div>
+  )
 }
 
 export default Sidebar;
